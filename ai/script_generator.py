@@ -114,14 +114,15 @@ STRUCTURED CONTENT:
 """
 
     response = ollama.chat(
-        model=MODEL_NAME,
-        messages=[
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ]
-    )
+    model=MODEL_NAME,
+    messages=[
+        {
+            "role": "user",
+            "content": prompt
+        }
+    ],
+    format="json"
+)
 
     raw_output = response["message"]["content"]
 
